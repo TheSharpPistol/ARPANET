@@ -9,9 +9,9 @@ import requests
 
 BOT = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
-canal_de_apps = 1205619768758108250
-canal_de_resultados = 1205619784746799114
-canal_de_info = 1205619745530060891
+canal_de_apps = 1198638547045978274
+canal_de_resultados = 1300274120897986641
+canal_de_info = 1076728328989442110
 
 activedms = {}
 foundids = {}
@@ -32,12 +32,12 @@ class Role():
 class RolesTem():
     def __init__(self):
         self.ClaseD = Role("Clase D", 1070754678285017139, 39486779)
-        self.Nivel0 = Role("Nivel 0", 1070757646535245904, 39669744)
-        self.Nivel1 = Role("Nivel 1", 1070754678285017141, 39688927)
-        self.Nivel2 = Role("Nivel 2", 1070754678285017142, 39982200)
-        self.Nivel3 = Role("Nivel 3", 1070754678285017143, 39994995)
-        self.Nivel4 = Role("Nivel 4", 1070754678285017144, 39995012)
-        self.Nivel5 = Role("Nivel 5", 1070754678285017145, 42590376)
+        self.Nivel0 = Role("Nivel 0", 1198640134560694313, 39669744)
+        self.Nivel1 = Role("Nivel 1", 1100646750865326141, 39688927)
+        self.Nivel2 = Role("Nivel 2", 1100646828858421280, 39982200)
+        self.Nivel3 = Role("Nivel 3", 1100646906469810277, 39994995)
+        self.Nivel4 = Role("Nivel 4", 1100646981279436852, 39995012)
+        self.Nivel5 = Role("Nivel 5", 1100647047423590410, 42590376)
         self.O5 = Role("O5", 1070754678310174830, 0)
         self.O5X = Role("O5X", 1070754678310174831, 0)
         self.O5Y = Role("O5Y", 1205322884411695195, 0)
