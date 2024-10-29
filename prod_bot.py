@@ -38,10 +38,10 @@ class RolesTem():
         self.Nivel3 = Role("Nivel 3", 1100646906469810277, 39994995)
         self.Nivel4 = Role("Nivel 4", 1100646981279436852, 39995012)
         self.Nivel5 = Role("Nivel 5", 1100647047423590410, 42590376)
-        self.O5 = Role("O5", 1070754678310174830, 0)
-        self.O5X = Role("O5X", 1070754678310174831, 0)
-        self.O5Y = Role("O5Y", 1205322884411695195, 0)
-        self.Admin = Role("Admin", 1070754678331166852, 0)
+        self.O5 = Role("O5", 1100647047423590410, 0)
+        self.O5X = Role("O5X", 1078848507617738802, 0)
+        self.O5Y = Role("O5Y", 1074503649096642640, 0)
+        self.Admin = Role("Admin", 1074507620855054356, 0)
         
     def getRoleFromDiscordID(self, DiscordID:int) -> Role:
         for role in self.__dict__.values():
@@ -75,14 +75,14 @@ class ApplicationsTem():
             0,
             "Nivel 0",
             [
-                Question("¿Tiene su cuenta de Roblox verificada en el grupo de Discord?", isShort=True),
-                Question("Indique una habilidad personal suya que podría ser esencial al momento de ser personal oficial de la fundación."),
-                Question("¿Qué te inspiró a unirte a nuestra fundación?"),
-                Question("¿Cuál es el protocolo estándar a seguir en caso de brecha de algún SCP?"),
-                Question("Indique su departamento favorito dentro de la fundación e indique el por qué lo es.")
+                Question("What is [Thunder Research Facilities]?", isShort=True),
+                Question("In case any Test Subject has managed to escape TSHA and you find him roaming around the facility, ¿What would you do?"),
+                Question("In your own words. What is a Latex Beast/Creature?"),
+                Question("Which of these groups is against the Foundations ethics?"),
+                Question("Are you funny?")
             ],
             Enum.Roles.Nivel0,
-            [Role("WebMNG", 1146208459579215912, 0), Enum.Roles.ClaseD, Role("CD", 1195463118516670675, 0)],
+            [Role("WebMNG", 1074507620855054356, 0), Enum.Roles.ClaseD, Role("CD", 1070754678285017139, 0)],
             [Enum.Roles.Nivel4, Enum.Roles.Nivel5, Enum.Roles.O5, Enum.Roles.O5X, Enum.Roles.O5Y, Enum.Roles.Admin],
             3
         )
@@ -91,13 +91,14 @@ class ApplicationsTem():
             1,
             "Nivel 1",
             [
-                Question("En caso de que algún clase-D logre escapar de su celda y usted lo encuentre deambulando por los pasillos, ¿Qué procedimiento seguiría usted? Sea detallado."),
-                Question("Explique la diferencia entre un SCP clase Euclid y un SCP clase Keter en términos de contención y peligro."),
-                Question("Nombre y explique al menos 3 amenazas o peligros mas comunes dentro de la instalación."),
-                Question("¿Por qué es esencial el anonimato y la ocultación de la Fundación SCP, y como se logra?")
+                Question("Name and explain at least two threats that you think are common inside the facility."),
+                Question("Would you like to join a department? If you do, name it and explain its purpose inside the facility."),
+                Question("What would you do in case the Test Subjects went rogue?"),
+                Question("What would you do in case of a breach?"),
+                Question("Why should you be promoted to Level 1?")
             ],
             Enum.Roles.Nivel1,
-            [Role("WebMNG", 1146208459579215912, 0), Enum.Roles.Nivel0],
+            [Role("WebMNG", 1074507620855054356, 0), Enum.Roles.Nivel0],
             [Enum.Roles.Nivel4, Enum.Roles.Nivel5, Enum.Roles.O5, Enum.Roles.O5X, Enum.Roles.O5Y, Enum.Roles.Admin],
             3
         )
@@ -135,7 +136,7 @@ class ApplicationsTem():
     def GetSeguridad(self):
         return Application(
             4,
-            "Departamento de Seguridad",
+            "Security Bureau",
             [
                 Question("¿Cual es la funcion del Departamento de Seguridad?"),
                 Question("¿Si encuentras un SCP como recluta que harias?"),
@@ -151,7 +152,7 @@ class ApplicationsTem():
     def GetCiencia(self):
         return Application(
             5,
-            "Departamento Cientifico",
+            "Contained Sentient Specimen",
             [
                 Question("¿Cual es la funcion del Departamento Cientifico?"),
                 Question("¿Por qué quiere unirse a este departamento?"),
@@ -183,7 +184,7 @@ class ApplicationsTem():
     def GetMedicina(self):
         return Application(
             7,
-            "Departamento Medico",
+            "Biological Research Bureau",
             [
                 Question("¿De que se encarga el departamento Médico?."),
                 Question("Explica que es lo que mas te gusta del departamento."),
@@ -380,10 +381,10 @@ async def on_ready():
         
 def checkuser(interaction:discord.Interaction) -> bool:
     return interaction.user.id in (
-        986737559705124884, #yo
-        511732131928473603, #alaska
-        511732131928473603, #yaku
-        754491675102937098 #max
+        1256116050928336928, #yo
+        1087887896121462784, #alaska
+        835564563029164032, #yakuSharm
+        1263290060191695006 #max
     )
         
 @BOT.event
